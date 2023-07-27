@@ -8,10 +8,10 @@ import {
 
 import { dataProvider } from "./dataProvider";
 import { authProvider } from "./authProvider";
-import { UserList } from "./components/UserList";
+import { UserList } from "./components/users/UserList";
 
 export const App = () => (
   <Admin dataProvider={dataProvider} authProvider={authProvider}>
-    <Resource name="users" list={UserList} create={CreateUser} />
+    <Resource name="users" list={UserList} />
   </Admin>
 );
