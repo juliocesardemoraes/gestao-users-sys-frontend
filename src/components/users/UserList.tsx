@@ -8,7 +8,7 @@ import {
   Datagrid,
 } from "react-admin";
 
-const ListActions = (props) => {
+const ListActions = (props: { [x: string]: any; className: any }) => {
   const { className, ...rest } = props;
 
   return (
@@ -18,10 +18,10 @@ const ListActions = (props) => {
   );
 };
 
-export const UserList = (props) => {
+export const UserList = (props: any) => {
   return (
     <>
-      <ListActions />
+      <ListActions className={props.className} />
       <List {...props}>
         <Datagrid rowClick="edit">
           <TextField source="id" />

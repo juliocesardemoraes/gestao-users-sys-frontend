@@ -1,6 +1,6 @@
 import { Edit, SimpleForm, TextInput, required } from "react-admin";
 
-export const UserEdit = (props) => {
+export const UserEdit = (props: any) => {
   return (
     <Edit {...props}>
       <SimpleForm>

@@ -1,7 +1,10 @@
 import { Create, SimpleForm, TextInput, required } from "react-admin";
 
-export const UserCreate = (props) => {
-  const handleKeyDown = (event) => {
+export const UserCreate = (props: any) => {
+  const handleKeyDown = (event: {
+    key: string;
+    preventDefault: () => void;
+  }) => {
     // Check if the Enter key is pressed
     if (event.key === "Enter") {
       event.preventDefault(); // Prevent default form submission
