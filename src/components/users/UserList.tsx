@@ -1,9 +1,7 @@
 import {
-  DateField,
   EmailField,
   List,
   TextField,
-  useListContext,
   TopToolbar,
   CreateButton,
   sanitizeListRestProps,
@@ -21,11 +19,10 @@ const ListActions = (props) => {
 };
 
 export const UserList = (props) => {
-  const { total } = useListContext();
   return (
     <>
       <ListActions />
-      <List {...props} actions={<ListActions />}>
+      <List {...props}>
         <Datagrid rowClick="edit">
           <TextField source="id" />
           <TextField source="name" />
